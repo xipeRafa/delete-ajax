@@ -1,0 +1,15 @@
+<div id="notice" class="alert alert-success"><%= notice %></div>
+<div class="center">
+<h2>
+  <strong>Name:</strong>
+  <%= @pony.name %>
+</h2>
+
+<h2>
+  <strong>Profession:</strong>
+  <%= @pony.profession %>
+</h2>
+
+<%= link_to 'Edit', edit_pony_path(@pony), class: "button button-light--info ml-0" %> 
+<%= link_to 'Back', ponies_path, class: "button button-light--blue ml-0" %>
+</div>

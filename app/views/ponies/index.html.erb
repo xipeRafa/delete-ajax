@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ponies</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profession</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ponies.each do |pony| %>
+      <tr>
+        <td><%= pony.name %></td>
+        <td><%= pony.profession %></td>
+        <td><%= link_to 'Show', pony %></td>
+        <td><%= link_to 'Edit', edit_pony_path(pony) %></td>
+        <td><%= link_to 'Destroy', pony, method: :delete, data: { confirm: 'Are you sure?' },:remote => true, :class => 'delete_pony' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pony', new_pony_path, class: "button button--blue" %>

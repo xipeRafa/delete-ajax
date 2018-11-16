@@ -1,0 +1,8 @@
+$('.delete_pony').bind('ajax:success', function(){
+  console.log("delete!");
+  $(this).parents('tr').fadeOut(400, function(){ // this line has changed
+    $(this).remove();
+  });
+});
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ponies</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+          <script>
+    $(document).ready(function () {
+    $(".alert-danger").fadeTo(2000, 1500).slideUp(1500, function(){
+    $(".alert-danger").slideUp(1500);
+});
+    $(".alert-success").fadeTo(2000, 1500).slideUp(1500, function(){
+    $(".alert-success").slideUp(1500);
+});
+    })
+
+    </script>
+</html>
